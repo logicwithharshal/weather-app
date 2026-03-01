@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Weather</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="glass-container">
+    <header>
+        <h1>Weather</h1>
+        <div class="unit-toggle">
+            <span id="unit-c" class="active">°C</span> | <span id="unit-f">°F</span>
+        </div>
+    </header>
+
+    <div class="search-box">
+        <input type="text" id="locationInput" placeholder="Search city...">
+        <button id="searchBtn">Search</button>
+        <!-- <button id="geoBtn" title="Use current location">📍</button> -->
+    </div>
+
+    <div id="loading" class="hidden">Searching the skies...</div>
+
+    <main id="weatherResult" class="hidden">
+        <div class="main-info">
+            <h2 id="cityName"></h2>
+            <div class="temp-display">
+                <img id="weatherIcon" src="" alt="icon">
+                <h3 id="temperature"></h3>
+            </div>
+            <p id="condition"></p>
+        </div>
+
+        <div class="details-grid">
+            <div class="detail-item">💧 <span>Humidity</span> <b id="humidity"></b></div>
+            <div class="detail-item">🌬️ <span>Wind</span> <b id="wind"></b></div>
+            <div class="detail-item">☀️ <span>UV Index</span> <b id="uv"></b></div>
+            <div class="detail-item">🌫️ <span>AQI</span> <b id="aqi"></b></div>
+        </div>
+
+        <div id="forecast" class="forecast-container"></div>
+    </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
